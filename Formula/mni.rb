@@ -5,20 +5,20 @@
 class Mni < Formula
   desc "Command line client for mNi Cloud"
   homepage "https://github.com/mNi-Cloud/cli"
-  version "2.0.0-rc.1"
+  version "1.0.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mNi-Cloud/cli/releases/download/v2.0.0-rc.1/mni_Darwin_x86_64.tar.gz"
-      sha256 "f5befd71a2d6dda319011963597442ddeedc95a89166563cd9e245552b9f3b30"
+      url "https://github.com/mNi-Cloud/cli/releases/download/v1.0.0/mni_Darwin_x86_64.tar.gz"
+      sha256 "953a91d4eaf15975549e2bb0d55fa5696f918d357b0f3c341c6b51f79de94e9e"
 
       define_method(:install) do
         bin.install "mni"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mNi-Cloud/cli/releases/download/v2.0.0-rc.1/mni_Darwin_arm64.tar.gz"
-      sha256 "35e9cc62d9f6d9f1d7237a867aebc6adc08affa4f002553d2455b354ee6938e4"
+      url "https://github.com/mNi-Cloud/cli/releases/download/v1.0.0/mni_Darwin_arm64.tar.gz"
+      sha256 "0c7e5c96fe771d7784ebd72e03e524aaa034d5160fb0bdbb56fced04ab11a21e"
 
       define_method(:install) do
         bin.install "mni"
@@ -28,15 +28,15 @@ class Mni < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mNi-Cloud/cli/releases/download/v2.0.0-rc.1/mni_Linux_x86_64.tar.gz"
-      sha256 "8228f8999a2c0191ca8e5fd1756106890cca65c3926cd9690545cbfbc9ab40c8"
+      url "https://github.com/mNi-Cloud/cli/releases/download/v1.0.0/mni_Linux_x86_64.tar.gz"
+      sha256 "898568c6340188c20c89bc021a71f23403e6e814208e164bc3f5fbf73e36f8ae"
       define_method(:install) do
         bin.install "mni"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mNi-Cloud/cli/releases/download/v2.0.0-rc.1/mni_Linux_arm64.tar.gz"
-      sha256 "d1264249243707072058c349abcd9b9822ac43156b199c139c8b562c9d54b309"
+      url "https://github.com/mNi-Cloud/cli/releases/download/v1.0.0/mni_Linux_arm64.tar.gz"
+      sha256 "4a1122d7a570aaf2f5689500b8aa9c27a6b4e8d08f7a6ba1b678da59023aa4af"
       define_method(:install) do
         bin.install "mni"
       end
